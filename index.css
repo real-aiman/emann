@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background: pink;
+    padding: 25px;
+    border: 5px solid black;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 25px hotpink;
+}
+
+.board {
+    position: relative;
+    width: 450px; /* Slightly larger for better fit */
+    height: 450px;
+    border: 4px solid black;
+    background: #ffe6ee;
+    overflow: hidden; /* Keeps snake inside borders */
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse; /* Cleaner lines */
+}
+
+td {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(255, 192, 203, 0.7);
+    width: 45px;
+    height: 45px;
+}
+
+.snake-img {
+    position: absolute;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    z-index: 1; /* Sits over the board background but behind markers */
+    pointer-events: none; /* Allows clicking through image */
+}
